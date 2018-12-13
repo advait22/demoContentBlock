@@ -2,9 +2,7 @@ const express = require('express');
 const app = express();
 var port = process.env.PORT || 3000;
 var BlockSDK = require('blocksdk');
-if (window.self === window.top) {
-	document.body.innerText = 'This application is for use in the Salesforce Marketing Cloud Content Builder Editor only.';
-} else {
+
 
 var sdk = new BlockSDK();
         sdk.getContent(function (content) {
@@ -29,5 +27,5 @@ var sdk = new BlockSDK();
             }
             test.on('text-change', saveText);
         });
-}
+
 app.listen(port, () => { console.log(`App listening on port ${port}`) });
