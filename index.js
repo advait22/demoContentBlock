@@ -2,11 +2,6 @@ const express = require('express');
 const app = express();
 var port = process.env.PORT || 3000;
 var BlockSDK = require('blocksdk');
-
-app.get('/', (req, res) => {
-    res.sendFile(__dirname + '/index.html');
-    console.log(sdk);
-    
         var sdk = new BlockSDK();
         sdk.getContent(function (content) {
             var test = document.getElementById('#editor-container').innerHTML;
@@ -30,8 +25,5 @@ app.get('/', (req, res) => {
             }
             test.on('text-change', saveText);
         });
-    
-})
-
 
 app.listen(port, () => { console.log(`App listening on port ${port}`) });
