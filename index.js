@@ -1,9 +1,9 @@
 const express = require('express');
 const app = express();
 var port = process.env.PORT || 3000;
-var SDK = require('blocksdk');
-var sdk = new SDK();
-console.log(sdk);
+//var SDK = require('blocksdk');
+//var sdk = new SDK();
+//console.log(sdk);
 
 
 /*var sdk = new BlockSDK();
