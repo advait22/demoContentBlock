@@ -3,10 +3,11 @@ const app = express();
 var path=require('path')
 var port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, '/')));
-//var SDK = require('blocksdk');
-//var sdk = new SDK();
-//console.log(sdk);
+var SDK = require('blocksdk');
+var sdk = new SDK();
+//
 app.get('/',(req,res) => {
+        console.log(sdk);
         res.sendFile(__dirname + '/index.html');
 });
 
