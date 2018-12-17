@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+var path=require('path')
 var port = process.env.PORT || 3000;
 app.use(express.static(path.join(__dirname, '/')));
 //var SDK = require('blocksdk');
