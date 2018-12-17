@@ -4,7 +4,9 @@ var port = process.env.PORT || 3000;
 //var SDK = require('blocksdk');
 //var sdk = new SDK();
 //console.log(sdk);
-
+app.post("/",(req,res) => {
+        res.sendFile(__dirname + '/index.html');
+});
 
 /*var sdk = new BlockSDK();
         sdk.getContent(function (content) {
